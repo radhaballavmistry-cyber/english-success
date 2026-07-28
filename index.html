@@ -101,7 +101,17 @@
             background: linear-gradient(rgba(37, 99, 235, 0.85), rgba(30, 64, 175, 0.9)), url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
             color: var(--white);
             text-align: center;
-            padding: 100px 20px;
+            padding: 80px 20px 100px 20px;
+        }
+
+        /* নীল অংশের ভেতরে আপনার নামের স্টাইল */
+        .blue-section-teacher {
+            font-size: 18px;
+            font-weight: 600;
+            color: #fef08a; /* হালকা হলুদ রঙ যাতে নীল ব্যাকগ্রাউন্ডে খুব ভালো ফোটে */
+            margin-bottom: 20px;
+            letter-spacing: 0.5px;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.3);
         }
 
         .hero h1 {
@@ -113,7 +123,7 @@
             font-size: 18px;
             max-width: 700px;
             margin: 0 auto 25px auto;
-            opacity: 0.9;
+            opacity: 0.95;
         }
 
         .btn {
@@ -126,20 +136,10 @@
             font-weight: 600;
             box-shadow: var(--shadow);
             transition: background 0.3s;
-            margin-bottom: 20px;
         }
 
         .btn:hover {
             background: #d97706;
-        }
-
-        .hero-teacher-credit {
-            font-size: 16px;
-            font-weight: 500;
-            color: #f8fafc;
-            letter-spacing: 0.5px;
-            margin-top: 10px;
-            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
         }
 
         /* Container & Sections */
@@ -311,12 +311,16 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero Section (Blue Portion) -->
     <section id="home" class="hero">
+        <!-- নীল অংশের ভেতরে আপনার নাম ও পদবী -->
+        <div class="blue-section-teacher">
+            <i class="fa-solid fa-chalkboard-user"></i> Presented by Radha Ballav Mistry, Asstt. Teacher
+        </div>
+        
         <h1>English Success (Class IV–X)</h1>
         <p>Free WBBSE English Study Materials, Lesson Notes, Bengali Explanations, and Free PDF Downloads for Primary & Secondary Students.</p>
         <a href="#classes" class="btn">Explore Free Study Materials</a>
-        <div class="hero-teacher-credit">Radha Ballav Mistry, Asstt. Teacher</div>
     </section>
 
     <!-- Main Container -->
@@ -338,83 +342,13 @@
             </a>
 
             <!-- Class VI -->
-            <a href="আপনার_ক্লাস_৬_এর_গুগল_ড্রাইভ_লিংক" target="_blank" class="class-card">
-                <h3>Class VI</h3>
-                <p>Click to view English Notes & PDFs</p>
-            </a>
+            <a href="আপনার_ক্লাস_৬_এর_গুগল_ড্রাইভ_লিংক" target="_blank" class="class-Ah, I'm sorry about that! Let me fix it right away. 
 
-            <!-- Class VII -->
-            <a href="আপনার_ক্লাস_৭_এর_গুগল_ড্রাইভ_লিংক" target="_blank" class="class-card">
-                <h3>Class VII</h3>
-                <p>Click to view English Notes & PDFs</p>
-            </a>
+Since your name **Radha Ballav Mistry** (Assistant Teacher) needs to be clearly featured in the blue portion, let's update it. 
 
-            <!-- Class VIII -->
-            <a href="আপনার_ক্লাস_৮_এর_গুগল_ড্রাইভ_লিংক" target="_blank" class="class-card">
-                <h3>Class VIII</h3>
-                <p>Click to view English Notes & PDFs</p>
-            </a>
+If you are working with a design, text graphic, or HTML/code layout, please let me know, or you can use the exact updated text/format below to place it directly into the blue section:
 
-            <!-- Class IX -->
-            <a href="আপনার_ক্লাস_৯_এর_গুগল_ড্রাইভ_লিংক" target="_blank" class="class-card">
-                <h3>Class IX</h3>
-                <p>Click to view English Notes & PDFs</p>
-            </a>
+> **Radha Ballav Mistry**
+> Assistant Teacher / Teacher-in-Charge
 
-            <!-- Class X -->
-            <a href="আপনার_ক্লাস_১০_এর_গুগল_ড্রাইভ_লিংক" target="_blank" class="class-card">
-                <h3>Class X</h3>
-                <p>Click to view Madhyamik PDFs</p>
-            </a>
-        </div>
-
-        <!-- Contact Section -->
-        <h2 id="contact" class="section-title">Get in Touch</h2>
-        <div class="contact-container">
-            <div class="contact-info">
-                <h3>Contact Information</h3>
-                <p><i class="fa-solid fa-user" style="color: var(--primary-color);"></i> <strong>Name:</strong> Radha Ballav Mistry</p>
-                <p><i class="fa-solid fa-phone" style="color: var(--primary-color);"></i> <strong>Phone / WhatsApp:</strong> 8967815555</p>
-                <p><i class="fa-solid fa-envelope" style="color: var(--primary-color);"></i> <strong>Email:</strong> radhaballavmistry@gmail.com</p>
-                <p><i class="fa-solid fa-location-dot" style="color: var(--primary-color);"></i> <strong>Location:</strong> West Bengal, India</p>
-            </div>
-
-            <div class="contact-box">
-                <h3 style="color: var(--secondary-color); margin-bottom: 15px;">Send Message</h3>
-                <form onsubmit="event.preventDefault(); alert('Thank you! Your message has been sent successfully.');">
-                    <div class="form-group">
-                        <label for="name">Your Name</label>
-                        <input type="text" id="name" placeholder="Enter your name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="text" id="phone" placeholder="Enter your phone number" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Your Message</label>
-                        <textarea id="message" rows="3" placeholder="Write your message here..." required></textarea>
-                    </div>
-                    <button type="submit" class="btn" style="width: 100%; border: none; cursor: pointer; margin-bottom: 0;">Submit</button>
-                </form>
-            </div>
-        </div>
-
-    </div>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 English Success (Class IV–X). All Rights Reserved.</p>
-        <p class="creator-credit">Created & Maintained by <strong>Radha Ballav Mistry, Asstt. Teacher</strong></p>
-    </footer>
-
-    <!-- JavaScript for Mobile Menu Toggle -->
-    <script>
-        const menuToggle = document.getElementById('menuToggle');
-        const navLinks = document.getElementById('navLinks');
-
-        menuToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
-    </script>
-</body>
-</html>
+If you want me to regenerate a specific layout, code snippet, or prompt for you with your name properly aligned in the blue section, just tell me what format you need!
