@@ -3,69 +3,454 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>English Success</title>
+    <title>English Success - WBBSE (Class VI–X)</title>
+    <!-- Google Fonts & FontAwesome for Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- সব CSS স্টাইল এখানে থাকবে -->
     <style>
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #1e40af;
+            --accent-color: #f59e0b;
+            --bg-color: #f8fafc;
+            --text-color: #334155;
+            --white: #ffffff;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
         }
+
         body {
-            background-color: #f4f7f6;
-            color: #333;
+            background-color: var(--bg-color);
+            color: var(--text-color);
             line-height: 1.6;
-            padding: 20px;
         }
-        .container {
-            max-width: 800px;
+
+        /* Header & Navigation */
+        header {
+            background: var(--white);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar {
+            max-width: 1200px;
             margin: 0 auto;
-            background: #fff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
-        h1 {
-            color: #2c3e50;
-            margin-bottom: 20px;
+
+        .logo {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--primary-color);
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(37, 99, 235, 0.85), rgba(30, 64, 175, 0.9)), url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+            color: var(--white);
             text-align: center;
+            padding: 100px 20px;
         }
-        p {
+
+        .hero h1 {
+            font-size: 38px;
             margin-bottom: 15px;
         }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto 25px auto;
+            opacity: 0.9;
+        }
+
         .btn {
             display: inline-block;
-            background: #3498db;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 16px;
+            background: var(--accent-color);
+            color: var(--white);
+            padding: 12px 25px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: var(--shadow);
+            transition: background 0.3s;
         }
+
         .btn:hover {
-            background: #2980b9;
+            background: #d97706;
+        }
+
+        /* Container & Sections */
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 28px;
+            color: var(--secondary-color);
+        }
+
+        /* Classes Grid */
+        .classes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+
+        .class-card {
+            background: var(--white);
+            padding: 25px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            border-top: 4px solid var(--primary-color);
+        }
+
+        .class-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .class-card h3 {
+            font-size: 22px;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        /* Features Section */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+
+        .feature-box {
+            background: var(--white);
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+
+        .feature-box h4 {
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .feature-box ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .feature-box ul li {
+            padding: 6px 0;
+            border-bottom: 1px solid #f1f5f9;
+            font-size: 14px;
+        }
+
+        .feature-box ul li a {
+            text-decoration: none;
+            color: var(--text-color);
+            transition: color 0.2s;
+        }
+
+        .feature-box ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Subscription Banner */
+        .sub-banner {
+            background: linear-gradient(135deg, #1e40af, #2563eb);
+            color: var(--white);
+            padding: 40px;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 50px;
+            box-shadow: var(--shadow);
+        }
+
+        .sub-banner h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        .sub-banner p {
+            font-size: 16px;
+            margin-bottom: 20px;
+        }
+
+        .price-tag {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--accent-color);
+            margin-bottom: 15px;
+        }
+
+        /* Contact Section */
+        .contact-box {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #cbd5e1;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        .form-group input:focus, .form-group textarea:focus {
+            border-color: var(--primary-color);
+        }
+
+        /* Footer */
+        footer {
+            background: #1e293b;
+            color: var(--white);
+            text-align: center;
+            padding: 20px;
+            margin-top: 50px;
+            font-size: 14px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 65px;
+                left: 0;
+                width: 100%;
+                background: var(--white);
+                box-shadow: var(--shadow);
+                padding: 20px;
+                text-align: center;
+            }
+            .nav-links.active {
+                display: flex;
+            }
+            .menu-toggle {
+                display: block;
+            }
+            .hero h1 {
+                font-size: 28px;
+            }
         }
     </style>
 </head>
 <body>
 
+    <!-- Header & Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <i class="fa-solid fa-graduation-cap"></i> English Success
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#classes">Classes</a></li>
+                <li><a href="#notes">Notes</a></li>
+                <li><a href="#mcq">MCQ</a></li>
+                <li><a href="#pdf">PDF Download</a></li>
+                <li><a href="#subscription">Subscription</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="menu-toggle" id="menuToggle">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <h1>English Success (Class VI–X)</h1>
+        <p>WBBSE English Study Materials, Lesson Notes, Bengali Explanations, Grammar, and Premium PDFs for Primary & Secondary Students.</p>
+        <a href="#subscription" class="btn">Join Premium for ₹50/Month</a>
+    </section>
+
+    <!-- Main Container -->
     <div class="container">
-        <h1>Welcome to English Success</h1>
-        <p>This is your single-file project. All styles and scripts are embedded here so it works seamlessly on GitHub Pages without path issues.</p>
-        <button class="btn" id="clickBtn">Click Me</button>
-        <p id="output" style="margin-top: 15px; font-weight: bold; color: #27ae60;"></p>
+        
+        <!-- Classes Section -->
+        <h2 id="classes" class="section-title">Select Your Class</h2>
+        <div class="classes-grid">
+            <div class="class-card">
+                <h3>Class VI</h3>
+                <p>WBBSE English Text & Grammar</p>
+            </div>
+            <div class="class-card">
+                <h3>Class VII</h3>
+                <p>WBBSE English Text & Grammar</p>
+            </div>
+            <div class="class-card">
+                <h3>Class VIII</h3>
+                <p>WBBSE English Text & Grammar</p>
+            </div>
+            <div class="class-card">
+                <h3>Class IX</h3>
+                <p>WBBSE English Text & Grammar</p>
+            </div>
+            <div class="class-card">
+                <h3>Class X</h3>
+                <p>Madhyamik English Preparation</p>
+            </div>
+        </div>
+
+        <!-- Features / Curriculum Section -->
+        <h2 id="notes" class="section-title">Study Materials & Resources</h2>
+        <div class="features-grid">
+            <div class="feature-box">
+                <h4><i class="fa-solid fa-book-open"></i> Lesson Notes</h4>
+                <ul>
+                    <li><a href="#">Class VI Detailed Summary</a></li>
+                    <li><a href="#">Class VII Prose & Poetry Notes</a></li>
+                    <li><a href="#">Class VIII Chapter Solutions</a></li>
+                    <li><a href="#">Class IX Text Analysis</a></li>
+                    <li><a href="#">Class X Madhyamik Text Solutions</a></li>
+                </ul>
+            </div>
+            <div class="feature-box">
+                <h4><i class="fa-solid fa-language"></i> Bengali Meanings</h4>
+                <ul>
+                    <li><a href="#">Word-by-Word Bengali Meaning</a></li>
+                    <li><a href="#">Paragraph Explanation in Bengali</a></li>
+                    <li><a href="#">Important Vocabulary Lists</a></li>
+                </ul>
+            </div>
+            <div class="feature-box">
+                <h4><i class="fa-solid fa-pen-nib"></i> Grammar & Writing</h4>
+                <ul>
+                    <li><a href="#">WBBSE English Grammar Rules</a></li>
+                    <li><a href="#">Correct Forms of Verbs</a></li>
+                    <li><a href="#">Notice, Paragraph & Letter Writing</a></li>
+                </ul>
+            </div>
+            <div class="feature-box" id="mcq">
+                <h4><i class="fa-solid fa-clipboard-question"></i> MCQ & Mock Tests</h4>
+                <ul>
+                    <li><a href="#">Chapter-wise Online MCQ Tests</a></li>
+                    <li><a href="#">Grammar Practice Sets</a></li>
+                    <li><a href="#">Self-Assessment Tests</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- PDF Download Section -->
+        <div id="pdf" class="sub-banner" style="background: linear-gradient(135deg, #0f172a, #334155);">
+            <h2><i class="fa-solid fa-file-pdf"></i> Premium PDF Downloads</h2>
+            <p>Download print-ready worksheets, suggestion papers, and grammar guides in high-quality PDF format.</p>
+            <a href="#subscription" class="btn">Unlock All PDFs (₹50/mo)</a>
+        </div>
+
+        <!-- Subscription Section -->
+        <div id="subscription" class="sub-banner">
+            <h2>Monthly Subscription Plan</h2>
+            <p>Get unlimited access to all exclusive notes, premium PDFs, mock tests, and special suggestions.</p>
+            <div class="price-tag">₹50 / Month</div>
+            <a href="#contact" class="btn">Pay via UPI / PhonePe / Razorpay</a>
+        </div>
+
+        <!-- Contact Section -->
+        <h2 id="contact" class="section-title">Get in Touch</h2>
+        <div class="contact-box">
+            <form onsubmit="event.preventDefault(); alert('Thank you for contacting us! We will get back to you soon.');">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" placeholder="Enter your name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email / Phone</label>
+                    <input type="text" id="email" placeholder="Enter your email or phone number" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message / Query</label>
+                    <textarea id="message" rows="4" placeholder="Write your message here..." required></textarea>
+                </div>
+                <button type="submit" class="btn" style="width: 100%;">Send Message</button>
+            </form>
+        </div>
+
     </div>
 
-    <!-- সব JavaScript কোড এখানে থাকবে -->
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 English Success (Class VI–X). All Rights Reserved. Developed for WBBSE Students.</p>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu Toggle -->
     <script>
-        document.getElementById('clickBtn').addEventListener('click', function() {
-            const output = document.getElementById('output');
-            output.textContent = 'Success! Your single-file JavaScript is working perfectly.';
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        menuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
         });
     </script>
-
 </body>
 </html>
