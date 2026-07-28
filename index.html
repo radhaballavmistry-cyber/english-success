@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Success</title>
+    
+    <!-- সব CSS স্টাইল এখানে থাকবে -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: #f4f7f6;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        .btn {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .btn:hover {
+            background: #2980b9;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Welcome to English Success</h1>
+        <p>This is your single-file project. All styles and scripts are embedded here so it works seamlessly on GitHub Pages without path issues.</p>
+        <button class="btn" id="clickBtn">Click Me</button>
+        <p id="output" style="margin-top: 15px; font-weight: bold; color: #27ae60;"></p>
+    </div>
+
+    <!-- সব JavaScript কোড এখানে থাকবে -->
+    <script>
+        document.getElementById('clickBtn').addEventListener('click', function() {
+            const output = document.getElementById('output');
+            output.textContent = 'Success! Your single-file JavaScript is working perfectly.';
+        });
+    </script>
+
+</body>
+</html>
