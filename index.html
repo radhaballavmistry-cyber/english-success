@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>English Success - WBBSE (Class VI–X)</title>
+    <title>English Success - WBBSE (Class IV–X)</title>
     <!-- Google Fonts & FontAwesome for Icons -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -149,7 +149,7 @@
         /* Classes Grid */
         .classes-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
             gap: 20px;
             margin-bottom: 50px;
         }
@@ -163,6 +163,9 @@
             transition: transform 0.3s, box-shadow 0.3s;
             cursor: pointer;
             border-top: 4px solid var(--primary-color);
+            text-decoration: none;
+            color: inherit;
+            display: block;
         }
 
         .class-card:hover {
@@ -171,90 +174,14 @@
         }
 
         .class-card h3 {
-            font-size: 22px;
+            font-size: 20px;
             color: var(--primary-color);
             margin-bottom: 10px;
         }
 
-        /* Features Section */
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
-            margin-bottom: 50px;
-        }
-
-        .feature-box {
-            background: var(--white);
-            padding: 25px;
-            border-radius: 8px;
-            box-shadow: var(--shadow);
-        }
-
-        .feature-box h4 {
-            color: var(--secondary-color);
-            margin-bottom: 10px;
-            font-size: 18px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .feature-box ul {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        .feature-box ul li {
-            padding: 6px 0;
-            border-bottom: 1px solid #f1f5f9;
-            font-size: 14px;
-        }
-
-        .feature-box ul li a {
-            text-decoration: none;
-            color: var(--text-color);
-            transition: color 0.2s;
-        }
-
-        .feature-box ul li a:hover {
-            color: var(--primary-color);
-        }
-
-        /* Subscription Banner */
-        .sub-banner {
-            background: linear-gradient(135deg, #1e40af, #2563eb);
-            color: var(--white);
-            padding: 40px;
-            border-radius: 10px;
-            text-align: center;
-            margin-bottom: 50px;
-            box-shadow: var(--shadow);
-        }
-
-        .sub-banner h2 {
-            font-size: 28px;
-            margin-bottom: 10px;
-        }
-
-        .sub-banner p {
-            font-size: 16px;
-            margin-bottom: 20px;
-        }
-
-        .price-tag {
-            font-size: 32px;
-            font-weight: 700;
-            color: var(--accent-color);
-            margin-bottom: 15px;
-        }
-
-        .payment-info {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 15px;
-            border-radius: 6px;
-            margin-top: 15px;
-            font-size: 15px;
+        .class-card p {
+            font-size: 13px;
+            color: #64748b;
         }
 
         /* Contact Section */
@@ -365,11 +292,7 @@
             </div>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#home" class="active">Home</a></li>
-                <li><a href="#classes">Classes</a></li>
-                <li><a href="#notes">Notes</a></li>
-                <li><a href="#mcq">MCQ</a></li>
-                <li><a href="#pdf">PDF Download</a></li>
-                <li><a href="#subscription">Subscription</a></li>
+                <li><a href="#classes">Free Classes & Notes</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <div class="menu-toggle" id="menuToggle">
@@ -380,101 +303,62 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <h1>English Success (Class VI–X)</h1>
-        <p>WBBSE English Study Materials, Lesson Notes, Bengali Explanations, Grammar, and Premium PDFs for Primary & Secondary Students.</p>
-        <a href="#subscription" class="btn">Join Premium for ₹50/Month</a>
+        <h1>English Success (Class IV–X)</h1>
+        <p>Free WBBSE English Study Materials, Lesson Notes, Bengali Explanations, and Free PDF Downloads for Primary & Secondary Students.</p>
+        <a href="#classes" class="btn">Explore Free Study Materials</a>
     </section>
 
     <!-- Main Container -->
     <div class="container">
         
         <!-- Classes Section -->
-        <h2 id="classes" class="section-title">Select Your Class</h2>
+        <h2 id="classes" class="section-title">Select Your Class (100% Free Materials)</h2>
         <div class="classes-grid">
-            <div class="class-card">
+            <!-- Class IV -->
+            <a href="আপনার_ক্লাস_৪_এর_গুগল_ড্রাইভ_লিংক" target="_blank" class="class-card">
+                <h3>Class IV</h3>
+                <p>Click to view English Notes & PDFs</p>
+            </a>
+
+            <!-- Class V -->
+            <a href="আপনার_ক্লাস_৫_এর_গুগল_ড্রাইভ_লিংক" target="_blank" class="class-card">
+                <h3>Class V</h3>
+                <p>Click to view English Notes & PDFs</p>
+            </a>
+
+            <!-- Class VI -->
+            <a href="আপনার_ক্লাস_৬_এর_গুগল_ড্রাইভ_লিংক" target="_blank" class="class-card">
                 <h3>Class VI</h3>
-                <p>WBBSE English Text & Grammar</p>
-            </div>
-            <div class="class-card">
+                <p>Click to view English Notes & PDFs</p>
+            </a>
+
+            <!-- Class VII -->
+            <a href="আপনার_ক্লাস_৭_এর_গুগল_ড্রাইভ_লিংক" target="_blank" class="class-card">
                 <h3>Class VII</h3>
-                <p>WBBSE English Text & Grammar</p>
-            </div>
-            <div class="class-card">
+                <p>Click to view English Notes & PDFs</p>
+            </a>
+
+            <!-- Class VIII -->
+            <a href="আপনার_ক্লাস_৮_এর_গুগল_ড্রাইভ_লিংক" target="_blank" class="class-card">
                 <h3>Class VIII</h3>
-                <p>WBBSE English Text & Grammar</p>
-            </div>
-            <div class="class-card">
+                <p>Click to view English Notes & PDFs</p>
+            </a>
+
+            <!-- Class IX -->
+            <a href="আপনার_ক্লাস_৯_এর_গুগল_ড্রাইভ_লিংক" target="_blank" class="class-card">
                 <h3>Class IX</h3>
-                <p>WBBSE English Text & Grammar</p>
-            </div>
-            <div class="class-card">
+                <p>Click to view English Notes & PDFs</p>
+            </a>
+
+            <!-- Class X -->
+            <a href="আপনার_ক্লাস_১০_এর_গুগল_ড্রাইভ_লিংক" target="_blank" class="class-card">
                 <h3>Class X</h3>
-                <p>Madhyamik English Preparation</p>
-            </div>
-        </div>
-
-        <!-- Features / Curriculum Section -->
-        <h2 id="notes" class="section-title">Study Materials & Resources</h2>
-        <div class="features-grid">
-            <div class="feature-box">
-                <h4><i class="fa-solid fa-book-open"></i> Lesson Notes</h4>
-                <ul>
-                    <li><a href="#">Class VI Detailed Summary</a></li>
-                    <li><a href="#">Class VII Prose & Poetry Notes</a></li>
-                    <li><a href="#">Class VIII Chapter Solutions</a></li>
-                    <li><a href="#">Class IX Text Analysis</a></li>
-                    <li><a href="#">Class X Madhyamik Text Solutions</a></li>
-                </ul>
-            </div>
-            <div class="feature-box">
-                <h4><i class="fa-solid fa-language"></i> Bengali Meanings</h4>
-                <ul>
-                    <li><a href="#">Word-by-Word Bengali Meaning</a></li>
-                    <li><a href="#">Paragraph Explanation in Bengali</a></li>
-                    <li><a href="#">Important Vocabulary Lists</a></li>
-                </ul>
-            </div>
-            <div class="feature-box">
-                <h4><i class="fa-solid fa-pen-nib"></i> Grammar & Writing</h4>
-                <ul>
-                    <li><a href="#">WBBSE English Grammar Rules</a></li>
-                    <li><a href="#">Correct Forms / Verbs</a></li>
-                    <li><a href="#">Notice, Paragraph & Letter Writing</a></li>
-                </ul>
-            </div>
-            <div class="feature-box" id="mcq">
-                <h4><i class="fa-solid fa-clipboard-question"></i> MCQ & Mock Tests</h4>
-                <ul>
-                    <li><a href="#">Chapter-wise Online MCQ Tests</a></li>
-                    <li><a href="#">Grammar Practice Sets</a></li>
-                    <li><a href="#">Self-Assessment Tests</a></li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- PDF Download Section -->
-        <div id="pdf" class="sub-banner" style="background: linear-gradient(135deg, #0f172a, #334155);">
-            <h2><i class="fa-solid fa-file-pdf"></i> Premium PDF Downloads</h2>
-            <p>Download print-ready worksheets, suggestion papers, and grammar guides in high-quality PDF format.</p>
-            <a href="#subscription" class="btn">Unlock All PDFs (₹50/mo)</a>
-        </div>
-
-        <!-- Subscription Section -->
-        <div id="subscription" class="sub-banner">
-            <h2>Monthly Subscription Plan</h2>
-            <p>Get unlimited access to all exclusive notes, premium PDFs, mock tests, and special suggestions.</p>
-            <div class="price-tag">₹50 / Month</div>
-            <div class="payment-info">
-                <p><strong>Payment Method:</strong> Pay ₹50 via PhonePe / Google Pay / Paytm to:</p>
-                <p style="font-size: 20px; font-weight: bold; color: #f59e0b; display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 5px;">
-                    <i class="fa-solid fa-phone"></i> 8967815555
-                </p>
-                <p style="font-size: 13px; margin-top: 8px; line-height: 1.4;">পেমেন্ট করার পর আপনার পেমেন্টের স্ক্রিনশট ও নাম নিচের কন্টাক্ট ফরম বা WhatsApp-এ পাঠিয়ে দিন।</p>
-            </div>
+                <p>Click to view Madhyamik PDFs</p>
+            </a>
         </div>
 
         <!-- Contact Section -->
-        <h2 id="contact" class="section-title">Get in Touch & Payment Help</h2>
+        <h2 id="contact" class="section-title">Get in Touch</h2>
         <div class="contact-container">
             <div class="contact-info">
                 <h3>Contact Information</h3>
@@ -486,7 +370,7 @@
 
             <div class="contact-box">
                 <h3 style="color: var(--secondary-color); margin-bottom: 15px;">Send Message</h3>
-                <form onsubmit="event.preventDefault(); alert('Thank you! We have received your message.');">
+                <form onsubmit="event.preventDefault(); alert('Thank you! Your message has been sent successfully.');">
                     <div class="form-group">
                         <label for="name">Your Name</label>
                         <input type="text" id="name" placeholder="Enter your name" required>
@@ -496,10 +380,10 @@
                         <input type="text" id="phone" placeholder="Enter your phone number" required>
                     </div>
                     <div class="form-group">
-                        <label for="message">Message / Payment Details</label>
-                        <textarea id="message" rows="3" placeholder="Write your message or Transaction ID..." required></textarea>
+                        <label for="message">Your Message</label>
+                        <textarea id="message" rows="3" placeholder="Write your message here..." required></textarea>
                     </div>
-                    <button type="submit" class="btn" style="width: 100%;">Submit</button>
+                    <button type="submit" class="btn" style="width: 100%; border: none; cursor: pointer;">Submit</button>
                 </form>
             </div>
         </div>
@@ -508,7 +392,7 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 English Success (Class VI–X). All Rights Reserved.</p>
+        <p>&copy; 2026 English Success (Class IV–X). All Rights Reserved.</p>
         <p class="creator-credit">Created & Maintained by <strong>Radha Ballav Mistry</strong></p>
     </footer>
 
