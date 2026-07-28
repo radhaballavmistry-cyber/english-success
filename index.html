@@ -45,19 +45,32 @@
         .navbar {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 15px 20px;
+            padding: 12px 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
         .logo {
-            font-size: 22px;
+            font-size: 20px;
             font-weight: 700;
             color: var(--primary-color);
             display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .logo-main {
+            display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
+        }
+
+        .logo-sub {
+            font-size: 11px;
+            font-weight: 500;
+            color: #64748b;
+            margin-left: 26px;
         }
 
         .nav-links {
@@ -236,14 +249,40 @@
             margin-bottom: 15px;
         }
 
+        .payment-info {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 6px;
+            margin-top: 15px;
+            font-size: 15px;
+        }
+
         /* Contact Section */
-        .contact-box {
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .contact-info, .contact-box {
             background: var(--white);
             padding: 30px;
             border-radius: 8px;
             box-shadow: var(--shadow);
-            max-width: 600px;
-            margin: 0 auto;
+        }
+
+        .contact-info h3 {
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+
+        .contact-info p {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
 
         .form-group {
@@ -273,9 +312,18 @@
             background: #1e293b;
             color: var(--white);
             text-align: center;
-            padding: 20px;
+            padding: 25px 20px;
             margin-top: 50px;
             font-size: 14px;
+        }
+
+        footer p {
+            margin-bottom: 5px;
+        }
+
+        .creator-credit {
+            color: #94a3b8;
+            font-size: 13px;
         }
 
         /* Responsive Design */
@@ -310,7 +358,10 @@
     <header>
         <nav class="navbar">
             <div class="logo">
-                <i class="fa-solid fa-graduation-cap"></i> English Success
+                <div class="logo-main">
+                    <i class="fa-solid fa-graduation-cap"></i> English Success
+                </div>
+                <div class="logo-sub">By Radha Ballav Mistry</div>
             </div>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#home" class="active">Home</a></li>
@@ -387,7 +438,7 @@
                 <h4><i class="fa-solid fa-pen-nib"></i> Grammar & Writing</h4>
                 <ul>
                     <li><a href="#">WBBSE English Grammar Rules</a></li>
-                    <li><a href="#">Correct Forms of Verbs</a></li>
+                    <li><a href="#">Correct Forms / Verbs</a></li>
                     <li><a href="#">Notice, Paragraph & Letter Writing</a></li>
                 </ul>
             </div>
@@ -413,34 +464,52 @@
             <h2>Monthly Subscription Plan</h2>
             <p>Get unlimited access to all exclusive notes, premium PDFs, mock tests, and special suggestions.</p>
             <div class="price-tag">₹50 / Month</div>
-            <a href="#contact" class="btn">Pay via UPI / PhonePe / Razorpay</a>
+            <div class="payment-info">
+                <p><strong>Payment Method:</strong> Pay ₹50 via PhonePe / Google Pay / Paytm to:</p>
+                <p style="font-size: 20px; font-weight: bold; color: #f59e0b; display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 5px;">
+                    <i class="fa-solid fa-phone"></i> 896781555
+                </p>
+                <p style="font-size: 13px; margin-top: 8px; line-height: 1.4;">পেমেন্ট করার পর আপনার পেমেন্টের স্ক্রিনশট ও নাম নিচের কন্টাক্ট ফরম বা WhatsApp-এ পাঠিয়ে দিন।</p>
+            </div>
         </div>
 
         <!-- Contact Section -->
-        <h2 id="contact" class="section-title">Get in Touch</h2>
-        <div class="contact-box">
-            <form onsubmit="event.preventDefault(); alert('Thank you for contacting us! We will get back to you soon.');">
-                <div class="form-group">
-                    <label for="name">Your Name</label>
-                    <input type="text" id="name" placeholder="Enter your name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email / Phone</label>
-                    <input type="text" id="email" placeholder="Enter your email or phone number" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message / Query</label>
-                    <textarea id="message" rows="4" placeholder="Write your message here..." required></textarea>
-                </div>
-                <button type="submit" class="btn" style="width: 100%;">Send Message</button>
-            </form>
+        <h2 id="contact" class="section-title">Get in Touch & Payment Help</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Contact Information</h3>
+                <p><i class="fa-solid fa-user" style="color: var(--primary-color);"></i> <strong>Name:</strong> Radha Ballav Mistry</p>
+                <p><i class="fa-solid fa-phone" style="color: var(--primary-color);"></i> <strong>Phone / WhatsApp:</strong> 896781555</p>
+                <p><i class="fa-solid fa-envelope" style="color: var(--primary-color);"></i> <strong>Email:</strong> englishsuccess@gmail.com</p>
+                <p><i class="fa-solid fa-location-dot" style="color: var(--primary-color);"></i> <strong>Location:</strong> West Bengal, India</p>
+            </div>
+
+            <div class="contact-box">
+                <h3 style="color: var(--secondary-color); margin-bottom: 15px;">Send Message</h3>
+                <form onsubmit="event.preventDefault(); alert('Thank you! We have received your message.');">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="text" id="phone" placeholder="Enter your phone number" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message / Payment Details</label>
+                        <textarea id="message" rows="3" placeholder="Write your message or Transaction ID..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn" style="width: 100%;">Submit</button>
+                </form>
+            </div>
         </div>
 
     </div>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 English Success (Class VI–X). All Rights Reserved. Developed for WBBSE Students.</p>
+        <p>&copy; 2026 English Success (Class VI–X). All Rights Reserved.</p>
+        <p class="creator-credit">Created & Maintained by <strong>Radha Ballav Mistry</strong></p>
     </footer>
 
     <!-- JavaScript for Mobile Menu Toggle -->
